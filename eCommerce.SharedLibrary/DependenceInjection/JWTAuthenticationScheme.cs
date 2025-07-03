@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace eCommerce.SharedLibrary.DependenceInjection
 {
-    public class JWTAuthenticationScheme
+    public static class JWTAuthenticationScheme
     {
-        public static IServiceCollection AddJWTAuthentication(IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddJWTAuthenticationScheme(this IServiceCollection services, IConfiguration configuration)
         {
             // Configure JWT authentication
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
