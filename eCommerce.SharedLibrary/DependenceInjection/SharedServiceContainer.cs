@@ -38,7 +38,7 @@ namespace eCommerce.SharedLibrary.DependenceInjection
                 .CreateLogger();
 
             // Add JWT Authentication - using Dependency Injection
-            JWTAuthenticationScheme.AddJWTAuthenticationScheme(services, configuration);
+            //JWTAuthenticationScheme.AddJWTAuthenticationScheme(services, configuration);
 
             return services;
         }
@@ -49,7 +49,7 @@ namespace eCommerce.SharedLibrary.DependenceInjection
             app.UseMiddleware<GlobalException>();
 
             // Use Middleware to listen only to API Gateway
-            app.UseMiddleware<ListenToOnlyApiGateway>();
+            // app.UseMiddleware<ListenToOnlyApiGateway>();
 
             return app;
         }
